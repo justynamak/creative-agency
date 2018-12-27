@@ -1,0 +1,42 @@
+.footer-bg{
+    padding: 2% 0;
+    background-color: $color-red;
+}
+.footer{
+    background-image: url(hello-colors/assets/socialmedia.svg);
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    
+    &__list{
+        display: flex;     
+        width:35%;
+        margin:0px auto;
+        
+        @media #{$information-large-size}{
+            width:45%;    
+        }
+        @media #{$information-medium-size}{
+            width:70%;    
+        }
+    }
+    
+    &__item{
+        flex: 1 1 25%;
+    }
+    
+    &__social{
+        display: inline-block;
+        padding: 25% 20%;
+        width:100%;    
+    }
+    
+    &__img{
+        width:100%;
+        height:100%;
+    }
+    
+    &__text{
+        color:#fff;        
+        padding-top: 5%;
+    }
+}

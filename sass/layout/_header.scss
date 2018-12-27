@@ -1,0 +1,121 @@
+//variables
+$header-title__font-size: 8rem;
+
+$second-block__bg-color: #75e3dd;
+$third-block__bg-color: #f4979c;
+
+
+//styles
+.header{
+    width:100%;
+    display: flex;
+    height:70vh;
+    align-self: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+    @media #{$information-large-size}{
+        height: auto;   
+    }
+    @media #{$information-small-size}{
+        flex-direction: column;    
+    }
+    
+    
+    &__title{
+        font-size: $header-title__font-size;
+        color:#fff;
+        letter-spacing: 0.0625em;
+        border-bottom: 0.02em solid #fff;    
+        line-height: 0.9;
+        margin-bottom: 3%;
+        font-family: $secondary__font-family;
+        
+        @media #{$information-small-size}{
+            font-size: 5rem;    
+        }
+    }
+    
+    &__container{
+        flex:1;    
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-repeat: no-repeat;    
+        background-position: 25% 83%;
+        
+        &--large{
+            flex:2;
+            
+            @media #{$information-large-size}{
+                flex:2 2 100%;
+            }
+            @media #{$information-small-size}{
+                flex:2;   
+            }
+        }
+        
+        &--content-down{
+            justify-content: flex-end;
+        }
+        
+        &--bg-first-block{
+            background-color: $color-dark-blue;
+        }
+        
+        &--bg-second-block{    
+            background-color:$second-block__bg-color;    
+        }
+        
+        &--bg-third-block{    
+            background-color: $third-block__bg-color;    
+        }
+        
+        &--bg-letter-h{
+            background-image:url(./../hello-colors/assets/h.svg);
+            background-size: 16rem;
+             
+             @extend %background-size-letter;
+            
+        }
+        
+        &--bg-letter-d{
+            background-image:url(./../hello-colors/assets/d.svg);
+            background-size: 12rem;
+            @extend %background-size-letter;
+        }
+        
+        &--bg-letter-p{
+            background-image:url(./../hello-colors/assets/p.svg);
+            background-size: 10rem;
+            @extend %background-size-letter;
+        }
+    }
+    
+    &__text {        
+        padding: 0 3rem 3rem 2rem;
+        text-align: right;        
+        align-self: flex-end;
+        line-height: 1.3;    
+        color:#fff;
+        
+        @media #{$information-large-size}{
+            padding: 3rem 3rem 3rem 2rem;       
+        }
+        
+        &--small-column{
+            width: min-content;
+            width: -moz-min-content;
+            width: -webkit-min-content;
+        }
+        
+        &--dark-green{
+            color: $color-dark-green;
+        }
+        
+        &--dark-red{
+            color: $color-dark-red;
+        }
+    }
+}
+

@@ -1,0 +1,34 @@
+.form{
+   height: 100%; 
+
+    &__input{
+        display: block;
+        margin-bottom: 3.5rem;
+        width:100%;
+        border:none;
+        border-bottom: 2px solid #f3747b;
+        font-family: 'Inconsolata', monospace; 
+        
+        &::placeholder{
+            color:#f3747b;    
+            font-size:1rem;
+        }
+    }
+    &__send{
+        width:30%;   
+        background: none;
+        cursor: pointer;
+        color: #f3747b;
+        border: 2px solid #f3747b;
+        margin-top:1%;
+        padding: 15px;
+        float: right;
+        transition: background 1s, color 1s;
+        
+        &:hover{
+            background: #f3747b;
+            color:#fff;
+        }
+    }
+
+}

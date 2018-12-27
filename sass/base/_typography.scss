@@ -1,0 +1,105 @@
+//variables
+
+$base__font-family: 'Inconsolata', monospace;
+$secondary__font-family: 'Prata', serif;
+
+$base__font-size: 0.9rem;
+$section-title__font-size: 4.5rem;
+$article-title__font-size: 2.5rem;
+//colors
+
+
+//styles
+body{    
+    font-family: $base__font-family;
+    font-size: $base__font-size;
+    
+}
+.section{
+    padding-bottom: 5%;
+    
+    &__title{ 
+    font-family: $secondary__font-family;
+    font-size:4.5rem;
+    letter-spacing: 0.0625em;
+    padding-bottom: 5%;
+    
+    @media #{$information-small-size}{
+        font-size:3.5rem;
+    }
+        
+    &--blue{
+        color:$color-green;
+    }
+    &--dark-blue{
+        color:$color-dark-blue;
+    }
+    &--red{
+        color:$color-red;
+    }
+}
+}
+.article{
+    display: flex;
+    
+    @media #{$information-small-size}{
+        flex-direction: column;
+        padding: 5% 0;    
+    }
+    
+     &--reverse{
+        flex-direction: row-reverse;
+        
+         @media #{$information-small-size}{
+             flex-direction: column;    
+         }
+    }
+    
+    &__text{
+        padding:5%;
+        text-align: left;
+        line-height: 1.25;
+        flex: 1 1 50%;       
+        
+        &--right{
+            text-align: right;
+        }
+        &--padding{    
+            padding: 0 12.5% 0 2%;
+            
+            @media #{$information-large-size}{
+                padding: 0;    
+            }
+        }
+    }
+    &__title{
+        font-family:$secondary__font-family;
+        font-size: $article-title__font-size;
+        padding-bottom: 3%; 
+        
+        @media #{$information-small-size}{
+            font-size:2rem;
+        }
+        
+        &--dark-green{
+            color:$color-dark-green;
+        }
+        &--blue{
+            color: $color-blue;
+        }
+    }
+    &__link{
+        padding-top: 10%;
+        display: block;
+        color:$color-green;
+        font-weight: 800;
+        letter-spacing: 0.3em;
+    }
+    &__paragraph{
+        padding-bottom: 1em;
+        
+        &--bold{
+            font-weight: bold;
+        }
+    }
+}
