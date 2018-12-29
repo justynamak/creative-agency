@@ -11,3 +11,18 @@ $color-dark-red: #be4249;
 $information-small-size: "only screen and (max-width: 32.5rem)";
 $information-medium-size: "only screen and (max-width: 35.875rem)";
 $information-large-size: "only screen and (max-width: 53.125rem)";
+$information-x-large-size:"only screen and (min-width: 100rem)";
+
+//breakpoints -responsive typography
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";

@@ -3,7 +3,8 @@
 $base__font-family: 'Inconsolata', monospace;
 $secondary__font-family: 'Prata', serif;
 
-$base__font-size: 0.9rem;
+$base-font-size: 1em;
+$base-line-height: 1.5;
 $section-title__font-size: 4.5rem;
 $article-title__font-size: 2.5rem;
 //colors
@@ -12,21 +13,37 @@ $article-title__font-size: 2.5rem;
 //styles
 body{    
     font-family: $base__font-family;
-    font-size: $base__font-size;
+    font-size: $base-font-size;    
+    line-height: $base-line-height;
     
+    @media #{$mq-medium} {
+    font-size: $base-font-size*1.1;
+    line-height: $base-line-height*1.1;
+    }
+
+  @media #{$mq-large} {
+    font-size: $base-font-size*1.2;
+  }
+
+  @media #{$mq-xlarge} {
+    font-size: $base-font-size*1.4;
+  }
+
+  @media #{$mq-xxlarge} {
+    font-size: $base-font-size*1.6;
+  }
 }
+    
+    
+
 .section{
     padding-bottom: 5%;
     
     &__title{ 
     font-family: $secondary__font-family;
-    font-size:4.5rem;
+    font-size:3.8em;
     letter-spacing: 0.0625em;
     padding-bottom: 5%;
-    
-    @media #{$information-small-size}{
-        font-size:3.5rem;
-    }
         
     &--blue{
         color:$color-green;
@@ -37,7 +54,7 @@ body{
     &--red{
         color:$color-red;
     }
-}
+    }
 }
 .article{
     display: flex;
@@ -59,7 +76,8 @@ body{
         padding:5%;
         text-align: left;
         line-height: 1.25;
-        flex: 1 1 50%;       
+        flex: 1 1 50%;
+        font-size: 0.9em;
         
         &--right{
             text-align: right;
@@ -75,11 +93,8 @@ body{
     &__title{
         font-family:$secondary__font-family;
         font-size: $article-title__font-size;
-        padding-bottom: 3%; 
-        
-        @media #{$information-small-size}{
-            font-size:2rem;
-        }
+        padding-bottom: 3%;
+        font-size:2em;        
         
         &--dark-green{
             color:$color-dark-green;
@@ -93,7 +108,11 @@ body{
         display: block;
         color:$color-green;
         font-weight: 800;
-        letter-spacing: 0.3em;
+        letter-spacing: 0.25em;
+        
+        @media #{$information-small-size}{
+            padding-bottom: 10%;   
+        }
     }
     &__paragraph{
         padding-bottom: 1em;

@@ -1,0 +1,16 @@
+@mixin letter($image, $left: 4%, $bottom: 3rem, $width: 10rem, $height:10rem){
+    &:before{
+            content:"";
+            background-image: url($image);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: $left;
+            bottom: $bottom;
+            width: $width;
+            height: $height;
+            z-index: 0;
+        }
+        
+}
+           

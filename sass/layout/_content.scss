@@ -5,7 +5,7 @@
 .main-container{
     width:75%;   
     margin:0 auto;
-    max-width: 60rem;
+    max-width: 70rem;
     
     @media #{$information-large-size}{
         width: 90%;           
@@ -21,9 +21,9 @@
     
     &__label-bg{
         position:absolute;
-        bottom: 95%;
-        right: 101%;           
-        height:7%;    
+        bottom: 98%;
+        right: 102%;           
+        height:1.4em;    
         transform: rotate(270deg);
         transform-origin: top right;
         background-color: $color-green;
@@ -31,8 +31,9 @@
     
     &__label-bg-reverse {
         position:absolute;        
-        left: 100%;
-        bottom: 95%;
+        left: 102%;
+        bottom: 98%;
+        height: 1.4em;
         transform: rotate(90deg);
         transform-origin: top left; 
         background-color: $color-green;
@@ -41,13 +42,10 @@
     &__label{
         font-family: $secondary__font-family;
         color: $color-dark-green;    
-        font-size: 2em;  
-        transform: translateY(0.4em);
+        font-size: 1.3em; 
+        letter-spacing: 0.0625em;
+        transform: translateY(0.2em);
         white-space: nowrap;
-        
-        @media #{$information-large-size}{
-            font-size: 1.5em;           
-        }
     }
 }
 .team{
@@ -57,11 +55,12 @@
         padding: 0;
         margin: 0 auto;            
     }
-    .team__figcaption{
+    &__figcaption{
         position: absolute;
         top:5%;
         left:25%;
         color:#fff;
+        line-height: 1;
         
         @media #{$information-large-size}{
             left:5%;    

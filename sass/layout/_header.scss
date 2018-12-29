@@ -10,6 +10,7 @@ $third-block__bg-color: #f4979c;
     width:100%;
     display: flex;
     height:70vh;
+    min-height: 24rem;
     align-self: stretch;
     flex-wrap: wrap;
     overflow: hidden;
@@ -30,10 +31,7 @@ $third-block__bg-color: #f4979c;
         line-height: 0.9;
         margin-bottom: 3%;
         font-family: $secondary__font-family;
-        
-        @media #{$information-small-size}{
-            font-size: 5rem;    
-        }
+        font-size: 5em;
     }
     
     &__container{
@@ -43,6 +41,7 @@ $third-block__bg-color: #f4979c;
         flex-direction: column;
         background-repeat: no-repeat;    
         background-position: 25% 83%;
+        position: relative;        
         
         &--large{
             flex:2;
@@ -61,35 +60,33 @@ $third-block__bg-color: #f4979c;
         
         &--bg-first-block{
             background-color: $color-dark-blue;
+            @include letter("./../hello-colors/assets/h.svg", $left:30%, $width: 17rem, $height: 17rem);
+            @media #{$information-large-size}{
+                @include letter("./../hello-colors/assets/h.svg", $left:35%, $bottom:10%, $width: 70%, $height: 70%);    
+            }
+            @media #{$information-small-size}{
+                @include letter("./../hello-colors/assets/h.svg", $bottom:10%, $width: 70%, $height: 70%);    
+            }
         }
         
         &--bg-second-block{    
-            background-color:$second-block__bg-color;    
+            background-color:$second-block__bg-color;
+            @include letter("./../hello-colors/assets/d.svg");
+            
+            @media #{$information-large-size}{
+                @include letter("./../hello-colors/assets/d.svg", $bottom:10%, $width: 80%, $height: 80%);    
+            }
         }
         
         &--bg-third-block{    
-            background-color: $third-block__bg-color;    
-        }
-        
-        &--bg-letter-h{
-            background-image:url(./../hello-colors/assets/h.svg);
-            background-size: 16rem;
-             
-             @extend %background-size-letter;
+            background-color: $third-block__bg-color;
+            @include letter("./../hello-colors/assets/p.svg");
             
+            @media #{$information-large-size}{
+                @include letter("./../hello-colors/assets/p.svg", $bottom:10%, $width: 80%, $height: 80%);    
+            }
         }
-        
-        &--bg-letter-d{
-            background-image:url(./../hello-colors/assets/d.svg);
-            background-size: 12rem;
-            @extend %background-size-letter;
-        }
-        
-        &--bg-letter-p{
-            background-image:url(./../hello-colors/assets/p.svg);
-            background-size: 10rem;
-            @extend %background-size-letter;
-        }
+ 
     }
     
     &__text {        
@@ -98,9 +95,11 @@ $third-block__bg-color: #f4979c;
         align-self: flex-end;
         line-height: 1.3;    
         color:#fff;
+        z-index: 2;
+        font-size: 1em;
         
         @media #{$information-large-size}{
-            padding: 3rem 3rem 3rem 2rem;       
+            padding: 3em 3em 3em 2em;       
         }
         
         &--small-column{
@@ -110,7 +109,7 @@ $third-block__bg-color: #f4979c;
         }
         
         &--dark-green{
-            color: $color-dark-green;
+            color: $color-dark-green; 
         }
         
         &--dark-red{
